@@ -1,0 +1,41 @@
+buildscript {
+    ext.kotlin_version = '1.5.21'
+    ext.hilt_version ='2.38'
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.1.3"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    minSdkVersion = 21
+    targetSdkVersion = 31
+    compileSdkVersion = 31
+    buildToolsVersion = "30.0.2"
+    appcompatVersion='1.4.1'
+    materialVersion= '1.7.0-alpha01'
+    activityKtxVersion= '1.6.0-alpha03'
+    retrofitVersion = '2.9.0'
+    okhttpInterceptorVersion = '4.9.0'
+    annotationVersion ='1.3.0'
+    livedata_ktx='2.4.1'
+    swipeRefreshViewVersion='1.1.0'
+    lifecycle_version ='2.4.1'
+    picassoVersion ='2.71828'
+}
